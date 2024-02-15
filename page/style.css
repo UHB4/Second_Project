@@ -1,0 +1,40 @@
+*{
+    list-style: none;
+    text-decoration: none;
+
+}
+
+
+
+.font-large3-bold {
+    font-size: large;
+    font-weight: bold;
+
+
+
+}
+
+.inline-block {
+    display: inline-block;
+
+}
+
+.py {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pxr {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.test-el-60 {
+
+}
+
+.test-el-60 {
+    position: relative; /* 위치 설정 */
+    top: 150px; /* 위로 10px 이동 */
+    left: 60px; /* 왼쪽으로 20px 이동 */
+}
