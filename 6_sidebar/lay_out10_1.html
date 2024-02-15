@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lay_out10_1.css"/>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+<!--    폰트-->
+</head>
+<body>
+<div id="wrap">
+    <header>
+<!--        <a href="lay_out6_notice.html">-->
+<!--        <div class="container">-->
+<!--            <article id="slider">-->
+<!--                <div class="sliderWrap">-->
+<!--                    <div class="slider s1">-->
+<!--                        <img src="img/01.png" alt="이미지 설명">-->
+<!--                        <span>이미지1</span>-->
+<!--                    </div>-->
+<!--                    <div class="slider s2">-->
+<!--                        <img src="img/02.png" alt="이미지 설명">-->
+<!--&lt;!&ndash;                        이미지 크기는 1200/200px&ndash;&gt;-->
+<!--                        <span>이미지2</span>-->
+<!--                    </div>-->
+<!--                    <div class="slider s3">-->
+<!--                        <img src="img/03.png" alt="이미지 설명">-->
+<!--                        <span>이미지3</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </article>-->
+<!--        </div>-->
+<!--        </a>-->
+    </header>
+    <nav>
+        <div id="nav" class="container">
+            <div class="nav_inner">
+                <div class="nav__logo">
+                    <a href="#">WEB <em>소설</em></a>
+                </div>
+                <div class="nav__manu">
+                    <ul>
+                        <li><a href="#" id="red">월간 베스트</a></li>
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">리뷰 게시판</a></li>
+                        <li><a href="#">나도 작가</a></li>
+                        <li><a href="#">공지 사항</a></li>
+                    </ul>          
+                </div>
+                <div class="nav__member">
+                    <a href="#">로그인</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <main>
+
+        <div class="contents container">
+
+
+ddddddddddddddddddddddddddd
+<!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+            <!--            게시판 작성-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="container"></div>
+    </footer>
+</div>
+
+<script>
+    window.onload = function(){
+        // let currnetIndex = 0;   //현재이미지
+        // const slider = document.querySelectorAll(".slider");  //모든 이미지 변ㅅ구에 저장
+        // slider.forEach(img => img.style.opacity = "0");   //모든 이미지 투명
+        // slider[0].style.opacity = "1"; //첫번쨰 이미지만 보이게
+        //
+        // setInterval(() => { //3초에 한번씩
+        //     let nextIndex = (currnetIndex + 1) % slider.length;  // 1 2 0 1 2 무한
+        //     slider[currnetIndex].style.opacity = "0";  //첫번쨰 이미지 사라짐
+        //     slider[nextIndex].style.opacity = "1";   //두번쨰 이미지 나타남
+        //     slider.forEach(img => img.style.transition = "all 0.5s"); //이미지 애니메이션 추가
+        //
+        //     currnetIndex = nextIndex;
+        // }, 3000);
+
+
+//스크롤이 내려가면 네비바가 고정되게
+        window.addEventListener('scroll', function () {
+            var nav = document.querySelector('nav');
+            if (window.scrollY > 0) {
+                nav.style.position = 'fixed';
+                nav.style.top = '0';
+                nav.style.width = '100%';
+                console.log('Scrolling!')
+
+                    // 스크롤 내리면 변할 모양
+
+                nav.style.backgroundColor = 'rgba(255,255,255,0.8)';
+                nav.style.borderBottom = '2px solid rgba(0, 0, 0, 0.3)';
+                nav.style.borderTop = '2px solid rgba(0, 0, 0, 0.3)';
+                nav.style.zIndex = '1000';
+            } else {
+                nav.style.position = 'static';
+
+                // 다시 돌아오면 원상복구
+
+                nav.style.backgroundColor = ''; // 기존 스타일로 복원하려면 비워둘 수 있습니다.
+                // 필요에 따라 추가적인 스타일 속성을 여기에 추가할 수 있습니다.
+            }
+        });
+
+
+
+
+
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
