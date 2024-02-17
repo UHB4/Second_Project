@@ -164,7 +164,7 @@ input[id="menuicon"]:checked+label span:nth-child(3){
     transition: all 0.35s;
     padding: 30px;
     display: grid;
-    grid-template-areas:
+    /*grid-template-areas:*/
 
       "cont1 cont2"
       "cont3 cont2"
@@ -172,11 +172,11 @@ input[id="menuicon"]:checked+label span:nth-child(3){
       "cont5 cont5"
 ;
     grid-template-rows:200px 340px 150px 780px ;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 100% ;
 
 }
 .sidebar_cont1{
-    grid-area: cont1;
+    grid-area: cont1a;
     width: 100%;
     height: 100%;
     padding: 30px;
@@ -230,7 +230,7 @@ main{
     /*height: 780px;*/
     height: auto;
     /*background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.6)),url("img/main.jpg");*/
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(21, 20, 20, 0.15)),url("img/main.jpg");
+    /*background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(21, 20, 20, 0.15)),url("img/main.jpg");*/
     background-size: cover; /* 배경 이미지를 cover로 설정 */
     background-position: center; /* 배경 이미지를 중앙에 정렬 */
 }
@@ -244,45 +244,64 @@ main{
     /*background: rgb(255, 255, 255);*/
 
 }
-.contents{
-    /*margin: 0;*/
-    /*padding: 0;*/
-    display: grid;
-    grid-template-areas:
-      "cont0 cont0"
-      "cont1 cont1"
-      "cont2 cont2"
+.contents {
+    /* 기존 스타일 유지 */
 
-;
-    grid-template-rows:100px 1000px 350px  ;
-    grid-template-columns: 50% 50% ;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+      "recent-box1 recent-box1"
+      "cont2 cont2";
+    grid-template-rows:  1000px 350px 100px;   /* 변경된 부분 */
+    grid-template-columns: repeat(1, 2fr);
 }
-.contents .header_sc{
-    grid-area: cont0;
+
+ .header-sc{
     background-color: rgb(255, 255, 255);
+     height: 100px;
 }
-.contents .header_sc ul{
+ .header-sc ul{
     text-align: center;
     position: relative;
     top: 40px;
 }
-.contents .header_sc li {
+ .header-sc li {
 
     display: inline-block; /* 가로로 배열 */
     margin-right: 10px; /* 각 항목 간의 간격 설정 (원하는 만큼 조절) */
 }
 
-.contents .header_sc .sub_txt {
+.header-sc .sub_txt {
     display: inline-block; /* 텍스트를 가로로 배열 */
     letter-spacing: 2px;
 }
-
-.contents .cont1{
-    grid-area: cont1;
-    background-color: rgba(227, 10, 10, 0.22);
-    margin: 0;
+.recent-box-pocket{
+    width: 1200px;
+    display: block;
+    /*grid-template-columns: repeat(1, 2fr);*/
+    gap: 10px;
 }
-
+.recent-box1 {
+    width: 48%;
+    height: 100px;
+    /* 높이 조절이 필요없어서 변경 */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.recent-box2 {
+    position: relative;
+    left: 600px;
+    bottom: 550px;
+    width: 48%;
+    height: 100px;
+    /* 높이 조절이 필요없어서 변경 */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 .contents .cont2{
     grid-area: cont2;
