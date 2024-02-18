@@ -164,19 +164,19 @@ input[id="menuicon"]:checked+label span:nth-child(3){
     transition: all 0.35s;
     padding: 30px;
     display: grid;
-    grid-template-areas:
+    /*grid-template-areas:*/
 
-      "cont1 cont2"
-      "cont3 cont2"
-      "cont3 cont4"
-      "cont5 cont5"
+"cont1 cont2"
+"cont3 cont2"
+"cont3 cont4"
+"cont5 cont5"
 ;
     grid-template-rows:200px 340px 150px 780px ;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 100% ;
 
 }
 .sidebar_cont1{
-    grid-area: cont1;
+    grid-area: cont1a;
     width: 100%;
     height: 100%;
     padding: 30px;
@@ -230,7 +230,7 @@ main{
     /*height: 780px;*/
     height: auto;
     /*background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.6)),url("img/main.jpg");*/
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(21, 20, 20, 0.15)),url("img/main.jpg");
+    /*background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(21, 20, 20, 0.15)),url("img/main.jpg");*/
     background-size: cover; /* 배경 이미지를 cover로 설정 */
     background-position: center; /* 배경 이미지를 중앙에 정렬 */
 }
@@ -241,180 +241,142 @@ main{
     height: inherit;
     /*padding: 0 ;*/
     margin: 0 auto;
-    background: rgb(255, 255, 255);
+    /*background: rgb(255, 255, 255);*/
 
 }
-.contents .header_sc{
-    grid-area: cont0;
-    background-color: rgb(255, 255, 255);
+.contents {
+    /* 기존 스타일 유지 */
+
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+      "recent-box1 recent-box1"
+      "cont2 cont2";
+    grid-template-rows:  1000px 350px 100px;   /* 변경된 부분 */
+    grid-template-columns: repeat(1, 2fr);
 }
-.contents .header_sc ul{
+
+.header-sc{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+}
+.header-sc ul{
     text-align: center;
     position: relative;
     top: 40px;
 }
-.contents .header_sc li {
+.header-sc li {
 
     display: inline-block; /* 가로로 배열 */
     margin-right: 10px; /* 각 항목 간의 간격 설정 (원하는 만큼 조절) */
 }
 
-.contents .header_sc .sub_txt {
+.header-sc .sub_txt {
     display: inline-block; /* 텍스트를 가로로 배열 */
     letter-spacing: 2px;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.recent-box-pocket{
+    width: 1200px;
+    display: block;
+    /*grid-template-columns: repeat(1, 2fr);*/
+    gap: 10px;
 }
-
-.book-card {
+.recent-box1 {
+    width: 48%;
+    height: 100px;
+    /* 높이 조절이 필요없어서 변경 */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.recent-box2 {
     position: relative;
-    top: 100px;
-    background-color: #e80f0f;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    left: 600px;
+    bottom: 550px;
+    width: 48%;
+    height: 100px;
+    /* 높이 조절이 필요없어서 변경 */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.book-card:hover {
-    transform: scale(1.05);
+.contents .cont2{
+    grid-area: cont2;
+    background-color: rgba(66, 72, 80, 0.5);
+}
+.cont2{
+    /*overflow-y: scroll;*/
 }
 
-.book-image {
+
+.cont2 li{
+    float: left;
+    width: 20%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+.cont2 li a{}
+.cont2 li a span{
     position: relative;
-    top: 50px;
+    /*em용*/
+    display: block;
+    width: 220px;
+    height: 300px;
+    /*그림 크기 늘리기전에 이거먼저 늘려야함*/
+    margin: 0 auto;
+    line-height:300px ;
+    /*이미지 전체적으로 가운데  em의 글씨를 가운데*/
+}
+.cont2 li a span img{
+    width: 220px;
+    height: 300px;
+    margin-bottom: 10px;
+    /*border-top-left-radius: 20px;*/
+    /*border-bottom-right-radius: 20px;*/
+    border-radius: 10px;
+}
+.cont2 li a span em{
+    position: absolute;
+    left: 0px;
+    top: 0px;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    color: white;
+    /*border-top-left-radius: 20px;*/
+    /*border-bottom-right-radius: 22px;*/
+    border-radius: 10px;
+
+    display: none;
+    background-color: rgba(86, 81, 81, 0.67);
+}
+.cont2 li a span:hover em{
+    display: block;
+}
+.cont2 li a:hover strong{
+    color: #6d87ff;
 }
 
-.book-info {
-    padding: 16px;
+.cont2 li a strong{
+    color: white;
+    display: block;
+    /*이게 꼭 필요*/
+    padding-top: 10px;
+
 }
+.contents .cont3{
+    grid-area: cont3;
+    background-color: rgba(231, 243, 236, 0.6);
 
-.book-title {
-    position: relative;
-    left: 150px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
 }
+.contents .cont4{
+    grid-area: cont4;
+    background-color: rgba(246, 188, 188, 0.96);
 
-.book-author {
-    position: relative;
-    left: 150px;
-    color: #666;
 }
-
-
-
-
-
-
-/*-------------------------------재우코드----------------------------------*/
-/*.contents{*/
-/*    !*margin: 0;*!*/
-/*    !*padding: 0;*!*/
-/*    display: grid;*/
-/*    grid-template-areas:*/
-/*      "cont0 cont0"*/
-/*      "cont1 cont1"*/
-/*      "cont2 cont2"*/
-
-/*;*/
-/*    grid-template-rows:100px 1000px 350px  ;*/
-/*    grid-template-columns: 50% 50% ;*/
-/*}*/
-
-
-/*.contents .cont1{*/
-/*    grid-area: cont1;*/
-/*    background-color: rgba(227, 10, 10, 0.22);*/
-/*    margin: 0;*/
-/*}*/
-
-
-/*.contents .cont2{*/
-/*    grid-area: cont2;*/
-/*    background-color: rgba(66, 72, 80, 0.5);*/
-/*}*/
-/*.cont2{*/
-/*    !*overflow-y: scroll;*!*/
-/*}*/
-
-
-/*.cont2 li{*/
-/*    float: left;*/
-/*    width: 20%;*/
-/*    margin-bottom: 5px;*/
-/*    margin-top: 5px;*/
-/*    text-align: center;*/
-/*}*/
-/*.cont2 li a{}*/
-/*.cont2 li a span{*/
-/*    position: relative;*/
-/*    !*em용*!*/
-/*    display: block;*/
-/*    width: 220px;*/
-/*    height: 300px;*/
-/*    !*그림 크기 늘리기전에 이거먼저 늘려야함*!*/
-/*    margin: 0 auto;*/
-/*    line-height:300px ;*/
-/*    !*이미지 전체적으로 가운데  em의 글씨를 가운데*!*/
-/*}*/
-/*.cont2 li a span img{*/
-/*    width: 220px;*/
-/*    height: 300px;*/
-/*    margin-bottom: 10px;*/
-/*    !*border-top-left-radius: 20px;*!*/
-/*    !*border-bottom-right-radius: 20px;*!*/
-/*    border-radius: 10px;*/
-/*}*/
-/*.cont2 li a span em{*/
-/*    position: absolute;*/
-/*    left: 0px;*/
-/*    top: 0px;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    color: white;*/
-/*    !*border-top-left-radius: 20px;*!*/
-/*    !*border-bottom-right-radius: 22px;*!*/
-/*    border-radius: 10px;*/
-
-/*    display: none;*/
-/*    background-color: rgba(86, 81, 81, 0.67);*/
-/*}*/
-/*.cont2 li a span:hover em{*/
-/*    display: block;*/
-/*}*/
-/*.cont2 li a:hover strong{*/
-/*    color: #6d87ff;*/
-/*}*/
-
-/*.cont2 li a strong{*/
-/*    color: white;*/
-/*    display: block;*/
-/*    !*이게 꼭 필요*!*/
-/*    padding-top: 10px;*/
-
-/*}*/
-/*.contents .cont3{*/
-/*    grid-area: cont3;*/
-/*    background-color: rgba(231, 243, 236, 0.6);*/
-
-/*}*/
-/*.contents .cont4{*/
-/*    grid-area: cont4;*/
-/*    background-color: rgba(246, 188, 188, 0.96);*/
-
-/*}*/
-
-
-
-
 footer{
     width: 100%;
     height: 300px;
