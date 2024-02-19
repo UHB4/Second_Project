@@ -201,7 +201,7 @@ input[id="menuicon"]:checked+label span:nth-child(3){
    width: 100%;
    height: 100%;
    background-color: rgba(224, 164, 248, 0.91);
-   
+
 
 }
 .sidebar_cont4{
@@ -413,24 +413,21 @@ main{
 
 
 
-/* styles.css */
-
-/* Flexbox 컨테이너 설정 */
 .flex-container {
-   display: flex; /* Flexbox를 사용하도록 설정 */
-   justify-content: space-around; /* 요소들을 주변으로 정렬 */
+   display: flex;
+   justify-content: space-around;
 }
 
-/* Flexbox 아이템 설정 */
+
 .flex-box1 {
-   width: 200px; /* 너비 설정 */
-   height: 250px; /* 높이 설정 */
+   width: 200px;
+   height: 250px;
    top: 600px;
-   background-color: lightblue; /* 배경색 설정 */
-   margin: 10px; /* 마진 설정 */
-   display: flex; /* Flexbox를 사용하도록 설정 */
-   justify-content: center; /* 수평 가운데 정렬 */
-   align-items: center; /* 수직 가운데 정렬 */
+   background-color: lightblue;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
    position: absolute;
    top: 300px;
@@ -442,50 +439,45 @@ main{
 
 
 
-/* 폰트 스타일 및 텍스트 줄 수 조정 */
+
 .font-medium2 {
-   font-weight: bold; /* 폰트를 두껍게 설정 */
-   font-size: 1.2em; /* 원하는 폰트 크기로 조정 */
+   font-weight: bold;
+   font-size: 1.2em;
 
 }
 
-/* 텍스트 줄 수 설정 (line-clamp) */
+
 .line-clamp-2 {
    display: -webkit-box;
-   -webkit-line-clamp: 2; /* 보여질 줄 수 */
+   -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
    overflow: hidden;
 }
 
-/* 텍스트 끊김 설정 (break-word-anywhere) */
+
 .break-word-anywhere {
-   word-break: break-all; /* 단어 단위로 줄 바꿈 */
+   word-break: break-all;
 }
 
-/* 높이 조정 */
+
 .pb-2pxr {
-   padding-bottom: 2px; /* 아래쪽 여백 설정 */
+   padding-bottom: 2px;
 }
 
-/* 텍스트 정렬 */
+
 .text-el-70 {
-   text-align: left; /* 왼쪽 정렬, 필요에 따라 변경 가능 */
+   text-align: left;
 }
 
-/* 추가적인 스타일링 */
+
 .align-middle {
-   vertical-align: middle; /* 수직 가운데 정렬 */
+   vertical-align: middle;
 }
 
 
 
-/*footer{*/
-/*   width: 100%;*/
-/*   height: 300px;*/
-/*   background-color: #2d312d;*/
 
-/*}*/
-/*미디어 쿼리*/
+
 @media (max-width: 1300px) {
 
 }
@@ -495,4 +487,3 @@ main{
 @media (max-width: 480px) {
 
 }
-/*slider*/
