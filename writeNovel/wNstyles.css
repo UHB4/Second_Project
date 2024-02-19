@@ -244,17 +244,19 @@ main{
     /*background: rgb(255, 255, 255);*/
 
 }
-.contents {
-    /* 기존 스타일 유지 */
+/*.content {*/
+/*    !* 기존 스타일 유지 *!*/
 
-    display: grid;
-    gap: 10px;
-    grid-template-areas:
-      "recent-box1 recent-box1"
-      "cont2 cont2";
-    grid-template-rows:  1000px 350px 100px;   /* 변경된 부분 */
-    grid-template-columns: repeat(1, 2fr);
-}
+/*    display: grid;*/
+/*    gap: 10px;*/
+/*    grid-template-areas:*/
+
+/*      "write_area write_area";*/
+/*    grid-template-rows:  1000px 350px 100px;   !* 변경된 부분 *!*/
+/*    grid-template-columns: repeat(1, 2fr);*/
+/*    background-color: red;*/
+/*}*/
+
 
 .header-sc{
     background-color: rgb(255, 255, 255);
@@ -275,56 +277,14 @@ main{
     display: inline-block; /* 텍스트를 가로로 배열 */
     letter-spacing: 2px;
 }
-.recent-box-pocket{
+.write_area{
     width: 1200px;
-    display: block;
-    /*grid-template-columns: repeat(1, 2fr);*/
-    gap: 10px;
-}
-.recent-box1 {
-    width: 48%;
-    height: 100px;
-    /* 높이 조절이 필요없어서 변경 */
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.recent-box1 h2{
+    height: 1000px;
     position: relative;
-    left: 160px;
+    left: 400px;
 }
-.recent-box1 p{
-    position: relative;
-    left: 160px;
-}
-.recent-box1 img{
-    position: relative;
-    bottom: 40px;
-}
-.recent-box2 {
-    position: relative;
-    left: 600px;
-    bottom: 550px;
-    width: 48%;
-    height: 100px;
-    /* 높이 조절이 필요없어서 변경 */
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.recent-box2 h2{
-    position: relative;
-    left: 160px;
-}
-.recent-box2 p{
-    position: relative;
-    left: 160px;
-}
-.recent-box2 img{
-    position: relative;
-    bottom: 40px;
+fieldset{
+    height: 1000px;
 }
 
 .contents .cont2{
