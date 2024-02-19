@@ -8,12 +8,6 @@
    /*폰트*/
 }
 
-*{
-   list-style: none;
-   text-decoration: none;
-
-}
-
 
 em{
    font-style: normal;
@@ -71,7 +65,7 @@ nav{
    border-radius: 5px;
 }
 
-s
+
 .nav__manu{
    width: 50%;
    text-align: center;
@@ -294,7 +288,7 @@ main{
    margin-top: 5px;
    text-align: center;
 }
-.cont2 li a{}
+
 .cont2 li a span{
    position: relative;
    /*em용*/
@@ -353,17 +347,20 @@ main{
 
 }
 
+/* search.css */
+
+/* 장르별 검색 결과 위치 조정 */
 .font-large3-bold {
    font-size: large;
    font-weight: bold;
-
-
-
+   position: absolute;
+   top: 150px; /* 원하는 위치로 조정하세요 */
+   left: 150px; /* 화면 가운데 정렬 */
+   transform: translateX(-50%); /* 가운데 정렬을 위한 transform */
 }
 
 .inline-block {
    display: inline-block;
-
 }
 
 .py {
@@ -379,14 +376,12 @@ main{
 .test-el-60 {
    position: absolute;
    top: 1500px;
-
 }
 
 .span{
    position: absolute;
    top: 500px;
 }
-
 
 
 
@@ -415,6 +410,72 @@ main{
 }
 
 
+
+
+
+/* styles.css */
+
+/* Flexbox 컨테이너 설정 */
+.flex-container {
+   display: flex; /* Flexbox를 사용하도록 설정 */
+   justify-content: space-around; /* 요소들을 주변으로 정렬 */
+}
+
+/* Flexbox 아이템 설정 */
+.flex-box1 {
+   width: 200px; /* 너비 설정 */
+   height: 250px; /* 높이 설정 */
+   top: 600px;
+   background-color: lightblue; /* 배경색 설정 */
+   margin: 10px; /* 마진 설정 */
+   display: flex; /* Flexbox를 사용하도록 설정 */
+   justify-content: center; /* 수평 가운데 정렬 */
+   align-items: center; /* 수직 가운데 정렬 */
+
+   position: absolute;
+   top: 300px;
+   left: 8%;
+   transform: translateX(-50%);
+}
+
+
+
+
+
+/* 폰트 스타일 및 텍스트 줄 수 조정 */
+.font-medium2 {
+   font-weight: bold; /* 폰트를 두껍게 설정 */
+   font-size: 1.2em; /* 원하는 폰트 크기로 조정 */
+
+}
+
+/* 텍스트 줄 수 설정 (line-clamp) */
+.line-clamp-2 {
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* 보여질 줄 수 */
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+
+/* 텍스트 끊김 설정 (break-word-anywhere) */
+.break-word-anywhere {
+   word-break: break-all; /* 단어 단위로 줄 바꿈 */
+}
+
+/* 높이 조정 */
+.pb-2pxr {
+   padding-bottom: 2px; /* 아래쪽 여백 설정 */
+}
+
+/* 텍스트 정렬 */
+.text-el-70 {
+   text-align: left; /* 왼쪽 정렬, 필요에 따라 변경 가능 */
+}
+
+/* 추가적인 스타일링 */
+.align-middle {
+   vertical-align: middle; /* 수직 가운데 정렬 */
+}
 
 
 

@@ -38,3 +38,8 @@
     top: 150px; /* 위로 10px 이동 */
     left: 60px; /* 왼쪽으로 20px 이동 */
 }
+
+.span{
+    position: absolute;
+    top: 500px;
+}
