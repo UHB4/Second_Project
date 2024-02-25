@@ -416,32 +416,32 @@ main{
 .flex-container {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center; /* 중앙 정렬을 위해 */
+   justify-content: center;
 }
 
 .flex-wrapper {
    display: flex;
-   justify-content: space-between; /* 요소들 사이에 공간을 넣기 위해 */
-   width: 100%; /* 전체 너비를 사용하도록 */
-   max-width: 1000px; /* 원하는 최대 너비 설정 */
+   justify-content: space-between;
+   width: 100%;
+   max-width: 1000px;
 }
 
 .flex-container {
    display: flex;
-   justify-content: center; /* 요소들을 수평으로 가운데 정렬합니다 */
+   justify-content: center;
    flex-wrap: wrap;
-   max-width: 1000px; /* 원하는 최대 너비 설정 */
-   margin: 0 auto; /* 컨테이너를 가운데 정렬합니다 */
+   max-width: 1000px;
+   margin: 0 auto;
 
 }
 
 .flex-box {
-   width: calc(33.33% - 20px); /* 각 요소의 너비 설정 및 간격 조정 */
+   width: calc(33.33% - 20px);
    height: 220px;
    background-color: lightblue;
-   margin: 10px; /* 간격을 조정합니다 */
+   margin: 10px;
    display: flex;
-   justify-content: center; /* 박스 내부의 컨텐츠를 가운데 정렬합니다 */
+   justify-content: center;
    align-items: center;
    top: 200px;
    margin-top: 150px;
@@ -450,21 +450,21 @@ main{
 
 
 .flex-box1 {
-   width: calc(33.33% - 20px); /* 각 요소의 너비 설정 및 간격 조정 */
+   width: calc(33.33% - 20px);
    height: 220px;
    background-color: lightblue;
-   margin: 10px; /* 간격을 조정합니다 */
+   margin: 10px;
    display: flex;
-   justify-content: center; /* 박스 내부의 컨텐츠를 가운데 정렬합니다 */
+   justify-content: center;
    align-items: center;
    top: 700px;
    margin-top: 150px;
 }
 
 .flex-box img {
-   display: block; /* 이미지를 블록 요소로 표시하여 가운데 정렬을 쉽게 설정 */
-   margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
-   border-radius: 10px; /* 이미지에 둥근 테두리를 추가 */
+   display: block;
+   margin: 0 auto;
+   border-radius: 10px;
 }
 
 
@@ -506,12 +506,12 @@ main{
    font-size: 1.5rem; /* text-el-60에 해당하는 크기로 조정 */
 }
 
-/* 이미지 스타일 */
+
 .pointer-events-none {
    pointer-events: none;
 }
 
-/* 버튼 박스 스타일 */
+/* 버튼 */
 .h-59pxr {
    height: 59px;
 }
@@ -522,18 +522,18 @@ main{
 }
 
 .border-line-10 {
-   border: 1px solid #CCCCCC; /* border-line-10에 해당하는 색상으로 설정 */
+   border: 1px solid #CCCCCC;
    border-radius: 4px;
 }
 
-/* 텍스트 줄 수 제한 */
+
 .line-clamp-1 {
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
 }
 
-/* 수정된 부분: active 상태 이미지의 투명도를 조정 */
+
 .active\:opacity-30 {
    opacity: 0.3;
 }
