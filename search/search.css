@@ -354,8 +354,8 @@ main{
    font-size: large;
    font-weight: bold;
    position: absolute;
-   top: 150px; /* 원하는 위치로 조정하세요 */
-   left: 150px; /* 화면 가운데 정렬 */
+   top: 200px; /* 원하는 위치로 조정하세요 */
+   left: 500px; /* 화면 가운데 정렬 */
    transform: translateX(-50%); /* 가운데 정렬을 위한 transform */
 }
 
@@ -415,25 +415,70 @@ main{
 
 .flex-container {
    display: flex;
-   justify-content: space-around;
+   flex-wrap: wrap;
+   justify-content: center; /* 중앙 정렬을 위해 */
 }
+
+.flex-wrapper {
+   display: flex;
+   justify-content: space-between; /* 요소들 사이에 공간을 넣기 위해 */
+   width: 100%; /* 전체 너비를 사용하도록 */
+   max-width: 1000px; /* 원하는 최대 너비 설정 */
+}
+
+.flex-container {
+   display: flex;
+   justify-content: center; /* 요소들을 수평으로 가운데 정렬합니다 */
+   flex-wrap: wrap;
+   max-width: 1000px; /* 원하는 최대 너비 설정 */
+   margin: 0 auto; /* 컨테이너를 가운데 정렬합니다 */
+
+}
+
+.flex-box {
+   width: calc(33.33% - 20px); /* 각 요소의 너비 설정 및 간격 조정 */
+   height: 220px;
+   background-color: lightblue;
+   margin: 10px; /* 간격을 조정합니다 */
+   display: flex;
+   justify-content: center; /* 박스 내부의 컨텐츠를 가운데 정렬합니다 */
+   align-items: center;
+   top: 200px;
+   margin-top: 150px;
+}
+
 
 
 .flex-box1 {
-   width: 200px;
-   height: 250px;
-   top: 600px;
+   width: calc(33.33% - 20px); /* 각 요소의 너비 설정 및 간격 조정 */
+   height: 220px;
    background-color: lightblue;
-   margin: 10px;
+   margin: 10px; /* 간격을 조정합니다 */
    display: flex;
-   justify-content: center;
+   justify-content: center; /* 박스 내부의 컨텐츠를 가운데 정렬합니다 */
    align-items: center;
-
-   position: absolute;
-   top: 300px;
-   left: 8%;
-   transform: translateX(-50%);
+   top: 700px;
+   margin-top: 150px;
 }
+
+.flex-box img {
+   display: block; /* 이미지를 블록 요소로 표시하여 가운데 정렬을 쉽게 설정 */
+   margin: 0 auto; /* 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+   border-radius: 10px; /* 이미지에 둥근 테두리를 추가 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
