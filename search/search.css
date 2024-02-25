@@ -471,6 +471,83 @@ main{
 
 
 
+/* 공통 스타일 */
+.flex {
+   display: flex;
+}
+
+.cursor-pointer {
+   cursor: pointer;
+}
+
+.items-center {
+   align-items: center;
+}
+
+.justify-center {
+   justify-content: center;
+}
+
+.py-16pxr {
+   padding-top: 16px;
+   padding-bottom: 16px;
+}
+
+.text-center {
+   text-align: center;
+}
+
+/* 텍스트 스타일 */
+.font-small2 {
+   font-size: 0.875rem; /* font-small2에 해당하는 크기로 조정 */
+}
+
+.text-el-60 {
+   font-size: 1.5rem; /* text-el-60에 해당하는 크기로 조정 */
+}
+
+/* 이미지 스타일 */
+.pointer-events-none {
+   pointer-events: none;
+}
+
+/* 버튼 박스 스타일 */
+.h-59pxr {
+   height: 59px;
+}
+
+.px-24pxr {
+   padding-left: 24px;
+   padding-right: 24px;
+}
+
+.border-line-10 {
+   border: 1px solid #CCCCCC; /* border-line-10에 해당하는 색상으로 설정 */
+   border-radius: 4px;
+}
+
+/* 텍스트 줄 수 제한 */
+.line-clamp-1 {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+/* 수정된 부분: active 상태 이미지의 투명도를 조정 */
+.active\:opacity-30 {
+   opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
