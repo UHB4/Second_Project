@@ -249,16 +249,26 @@ main{
 .contents{
    /*margin: 0;*/
    /*padding: 0;*/
-   display: grid;
-   grid-template-areas:
-      "cont0 cont0"
-      "cont1 cont1"
-      "cont2 cont2"
+   /*display: grid;*/
+   /*grid-template-areas:*/
+   /*   "cont0 cont0"*/
+   /*   "cont1 cont1"*/
+   /*   "cont2 cont2"*/
 
-   ;
-   grid-template-rows:100px 1000px 350px  ;
-   grid-template-columns: 50% 50% ;
+   /*;*/
+   /*grid-template-rows:100px 1000px 350px  ;*/
+   /*grid-template-columns: 50% 50% ;*/
+
+
 }
+
+.flex-box img{
+   width: 146.656px;
+   height: 220px;
+}
+
+
+
 .contents .cont0{
    grid-area: cont0;
    background-color: rgba(239, 231, 231, 0.24);
@@ -433,20 +443,19 @@ main{
    max-width: 1000px;
    margin: 0 auto;
 
-}
 
+}
 .flex-box {
-   width: calc(33.33% - 20px);
+   width: calc(16.6667% - 20px); /* 각 요소의 너비를 16.6667%로 설정 */
    height: 220px;
    background-color: lightblue;
    margin: 10px;
    display: flex;
    justify-content: center;
    align-items: center;
-   top: 200px;
-   margin-top: 150px;
+   border-radius: 10px;
+   margin-bottom: 70px;
 }
-
 
 
 .flex-box1 {
