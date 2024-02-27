@@ -420,15 +420,14 @@ footer{
    border-radius: 5px;
 }
 
+/* strong 태그 내의 span 숨기기 */
+.default_paging strong span.blind {
+   display: none;
+}
 
-
-.btn-go-submit{
-   padding: 10px;
-   border-radius: 5px;
-   background-color: #fede22;
-   /*border: 1px solid #fede22;*/
-
-
+/* strong 태그 내의 span 활성화 */
+.default_paging strong:only-of-type span.blind {
+   display: inline;
 }
 
 
@@ -467,14 +466,84 @@ footer{
 /*.span {*/
 /*   margin-top: 500px; !* 요소 사이의 간격을 위한 마진 *!*/
 /*}*/
+/* 기본적인 스타일 유지 */
 
 
+.font-large3-bold {
+   font-size: 1.5rem; /* 원하는 크기로 조정하세요 */
+   font-weight: bold;
+   margin-right:1900px ;
+   margin-top: 130px;
+}
+
+.inline-block {
+   display: inline-block;
+}
+
+.py-14pxr {
+   padding-top: 14px;
+   padding-bottom: 14px;
+}
+
+.text-el-60 {
+   font-size: 20px; /* 원하는 크기로 조정하세요 */
+}
+
+/* 추가된 스타일 */
+.font-large3-bold {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
 
 
+/* 네비게이션 메뉴 */
+.navi > li > a {
+   width: 180px;
+   height: auto;
+   background-color: #d7bfbf;
+   color: white;
+   line-height: 40px;
+   text-align: center;
+   font-size: 18px;
+   display: block;
+   text-decoration: none; /* 링크 텍스트 스타일 제거 */
+}
 
+.navi > li > a:hover {
+   font-weight: bold;
+}
 
+/* 서브 메뉴 */
+.sub {
+   display: none; /* 최신순과 인기순 숨김 처리 */
+}
 
+.sub > li > a {
+   width: 180px;
+   height: auto;
+   background-color: white;
+   line-height: 40px;
+   text-align: center;
+   font-size: 16px;
+   display: block;
+   text-decoration: none; /* 링크 텍스트 스타일 제거 */
+}
 
+.sub > li > a:hover {
+   background-color: #d5b9b9; /* 호버 시 색상 변경 */
+}
+
+/* 최신순 또는 인기순 클릭 시 해당 메뉴 보이도록 수정 */
+.navi > li:hover .sub {
+   display: block;
+}
+
+.navi {
+   margin-left: 1700px; /* 오른쪽으로 100px 이동 */
+   border-radius: 20px; /* 원하는 값으로 조절 */
+   overflow: hidden;
+}
 
 
 
