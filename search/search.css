@@ -360,13 +360,17 @@ main{
 /* search.css */
 
 /* 장르별 검색 결과 위치 조정 */
+
+.parent-container {
+   text-align: right; /* 내부 요소를 오른쪽으로 정렬 */
+
+}
+
 .font-large3-bold {
    font-size: large;
    font-weight: bold;
-   position: absolute;
-   top: 200px; /* 원하는 위치로 조정하세요 */
-   left: 500px; /* 화면 가운데 정렬 */
-   transform: translateX(-50%); /* 가운데 정렬을 위한 transform */
+   margin: 0; /* 위, 오른쪽, 아래, 왼쪽 마진을 0으로 설정하여 오른쪽으로 정렬 */
+   text-align: right; /* 텍스트를 오른쪽으로 정렬 */
 }
 
 .inline-block {
@@ -384,14 +388,13 @@ main{
 }
 
 .test-el-60 {
-   position: absolute;
-   top: 1500px;
+   margin-top: 1500px; /* 요소 사이의 간격을 위한 마진 */
 }
 
-.span{
-   position: absolute;
-   top: 500px;
+.span {
+   margin-top: 500px; /* 요소 사이의 간격을 위한 마진 */
 }
+
 
 
 

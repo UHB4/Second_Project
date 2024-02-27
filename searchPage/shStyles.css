@@ -1,0 +1,485 @@
+*{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+   color: black;
+   font-family: 'GmarketSans';
+   /*폰트*/
+}
+em{
+   font-style: normal;
+}
+#wrap {
+   width: 100%;
+
+}
+header{
+
+
+}
+nav{
+   /*width: 100%;*/
+   /*height: 70px;*/
+   background-color: #ffffff;
+   border-bottom:2px solid rgba(0,0,0,0.3);
+   border-top: 2px solid rgba(0,0,0,0.3);
+
+   /*position: fixed;*/
+   /*top: 0;*/
+   /*width: 100%;*/
+
+}
+/*네비타입*/
+.nav_inner{
+   width: 100%;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   /*!*가운데로 글자 정렬*세로방향/*/
+   justify-content: space-between;
+   /*background-color: #b6f5b0;*/
+   padding: 0 20px;
+   /*패딩떔에 삐져나옴 패딩이 width 에 포함되서 40px이 삐져나옴*/
+   box-sizing: border-box;
+/*   이걸 해줘야 100% 안에서 패딩작업이 일어남*/
+
+
+}
+.nav__logo{
+   width: 15%;
+   font-size: 30px;
+   font-weight: 700;
+   /*background-color: #111;*/
+}
+.nav__logo em {
+   font-size: 18px;
+   font-weight: 400;
+}
+.nav__search{
+   width: 20%;
+   padding: 10px;
+}
+.nav__search input{
+   padding: 8px;
+   border-radius: 5px;
+   margin-left: -25px;
+}
+.nav__search .search{}
+.sch_btn{
+   padding:8px 2px;
+   border-radius: 5px;
+}
+
+
+.nav__manu{
+   width: 50%;
+   text-align: center;
+   /*background-color: #555;*/
+
+}
+.nav__manu ul #red{
+   color: red;
+   font-size: 15px;
+   font-weight: bold;
+}
+.nav__manu ul li{
+   display: inline;
+}
+.nav__manu ul li a {
+   padding: 15px 25px;
+   margin: 0 5px;
+   border-radius: 10px;
+   transition: background-color 0.6s;
+
+}
+.nav__manu ul li a:hover{
+   background-color: rgba(215, 215, 215, 0.72);
+   border-radius: 10px;
+   /*transition: background-color 3s;*/
+   /*이건 바로없어짐*/
+}
+.nav__member{
+   /*width: 20%;*/
+   /*background-color: #999;*/
+   /*text-align: right;*/
+}
+.nav__member a{
+   border:3px solid black;
+   border-radius:50px ;
+   padding: 10px 30px;
+   background-color: #ffffff;
+
+}
+
+input[id="menuicon"]{
+   display: none;
+   padding-left: 30px;
+}
+input[id="menuicon"]+label{
+   display: block;
+   position: relative;
+   width: 60px;
+   height: 40px;
+   cursor: pointer;
+   z-index: 99;
+}
+input[id="menuicon"]+label span{
+
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 5px;
+   border-radius: 30px;
+   background-color: #090909;
+
+   transition: all .2s;
+}
+input[id="menuicon"]+label span:nth-child(1){top: 0}
+input[id="menuicon"]+label span:nth-child(2){
+   top: 50%;
+   transform: translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3){bottom: 0}
+
+input[id="menuicon"]:checked+label{
+   z-index: 99;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1){
+   top: 50%;
+   transform: translateY(-50%) rotate(45deg);
+   background-color: #ff0000;
+}
+input[id="menuicon"]:checked+label span:nth-child(2){
+
+   opacity: 0;
+}
+input[id="menuicon"]:checked+label span:nth-child(3){
+   top: 50%;
+   transform: translateY(-50%) rotate(-45deg);
+   background-color: #ff0000;
+}
+.sidebar{
+   width: 500px;
+   height: 100%;
+   background-color: rgba(141, 141, 141, 0.83);
+   position: fixed;
+   top: 72px;
+   right: -560px;
+   /*양쪽 패딩만큼 더*/
+   z-index: 90;
+   transition: all 0.35s;
+   padding: 30px;
+   display: grid;
+   grid-template-areas:
+
+      "cont1 cont2"
+      "cont3 cont2"
+      "cont3 cont4"
+      "cont5 cont5"
+;
+   grid-template-rows:200px 340px 150px 780px ;
+   grid-template-columns: 50% 50% ;
+
+}
+.sidebar_cont1{
+   grid-area: cont1;
+   width: 100%;
+   height: 100%;
+   padding: 30px;
+   text-align: center;
+   box-sizing: border-box;
+   /*패딩주니까 상자가 커짐. ㅡㅡ*/
+   background-color: #abbdfc;
+
+}
+.sidebar_cont2{
+   grid-area: cont2;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(243, 145, 145, 0.91);
+}
+
+
+.sidebar_cont3{
+   grid-area: cont3;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(224, 164, 248, 0.91);
+   
+
+}
+.sidebar_cont4{
+   grid-area: cont4;
+   width: 100%;
+   height: 100%;
+   background-color: #96fda2;
+}
+.sidebar_cont5{
+   grid-area: cont5;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(252, 217, 79, 0.87);
+}
+
+
+
+
+
+input[id="menuicon"]:checked+label+div{
+   right: 0;
+}
+
+
+main{
+   width: 100%;
+   position: relative;
+   /*height: 780px;*/
+   height: auto;
+   /*background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.6)),url("img/main.jpg");*/
+   background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.6)),url("../img/main.jpg");
+   background-size: cover; /* 배경 이미지를 cover로 설정 */
+   background-position: center; /* 배경 이미지를 중앙에 정렬 */
+}
+/*---------------------마이 헤더 시작------------------------------------------*/
+.header-sc{
+   background-color: rgb(255, 255, 255);
+   height: 50px;
+   border-bottom: 1px solid black;
+
+
+
+
+}
+.header-sc ul {
+   display: flex; /* Flexbox를 사용하여 자식 요소를 가로로 배열 */
+   justify-content: center; /* 수평 가운데 정렬 */
+   align-items: center; /* 수직 가운데 정렬 */
+   height: 100%; /* 부모(여기서는 .header-sc)의 높이를 100%로 설정하여 수직 정렬을 적용 */
+}
+
+.header-sc li {
+   margin-right: 30px;
+}
+
+.header-sc .sub_txt {
+   letter-spacing: 2px;
+}
+
+
+
+/*-------------------------헤더 끝----------------------------------------------*/
+
+.container {
+   width: 1200px;
+   height: inherit;
+   /*padding: 0 ;*/
+   margin: 0 auto;
+   /*background: rgb(255, 255, 255);*/
+
+}
+.contents{
+   height: 2000px;
+/*   !*margin: 0;*!*/
+/*   !*padding: 0;*!*/
+/*   display: grid;*/
+/*   grid-template-areas:*/
+/*      "cont0 cont0"*/
+/*      "cont1 cont1"*/
+/*      "cont2 cont2"*/
+/*      "cont3 cont4"*/
+/*   ;*/
+/*   grid-template-rows:200px 340px 1500px 780px ;*/
+/*   grid-template-columns: 50% 50% ;*/
+}
+
+footer{
+   width: 100%;
+   height: 300px;
+   background-color: #2d312d;
+   margin-top: 5000px;
+
+}
+/*미디어 쿼리*/
+@media (max-width: 1300px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 480px) {
+
+}
+/*slider*/
+#slider {
+   width: 100%;
+   height: 300px;
+   /*background-color: #d9d9d9;*/
+}
+
+.sliderWrap{
+   position: relative;
+}
+
+/*.sliderWrap > div {*/
+/*    display: none;*/
+/*}*/
+
+/*.sliderWrap > div:first-child {*/
+/*    display: block;*/
+/*}*/
+.sliderWrap .slider {
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+.sliderWrap .slider {
+   vertical-align: top;
+   /*    이미지는 습관적으로 해야하는 옵션 */
+}
+.sliderWrap .slider span {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   /*완벽히 가운데 오기 위해서*/
+   background-color: rgb(0, 0, 0, 0.5);
+   padding: 10px 20px;
+   color: white;
+}
+
+
+/*!*자바스크립트용 css */
+.sliderWrap > div {
+   display: block;
+}
+
+
+
+.flex-box {
+   width: 180px;
+   height: 220px;
+   background-color: black;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   margin-bottom: 70px;
+}
+
+.flex-box img {
+   display: block;
+   border-radius: 10px;
+
+   height: 220px; /* 부모 요소(.flex-box)의 높이에 맞게 이미지 높이를 조정 */
+   width: 180px; /* 이미지 너비를 유연하게 조정하여 비율 유지 */
+}
+
+
+/*flex-box1 {*/
+/*   width: calc(16.6667% - 20px); !* 각 요소의 너비를 16.6667%로 설정 *!*/
+/*   height: 220px;*/
+/*   background-color: black;*/
+/*   margin: 10px;*/
+/*   display: flex;*/
+/*   justify-content: center;*/
+/*   align-items: center;*/
+/*   border-radius: 10px;*/
+/*   margin-bottom: 70px;*/
+/*}*/
+
+/* 페이지 링크를 가로로 배열하고 각 링크 사이에 간격을 주기 위해 flex 속성 사용 */
+.default_paging {
+   display: flex;
+   justify-content: center; /* 가로 중앙 정렬 */
+   align-items: center; /* 세로 중앙 정렬 */
+   margin-top: 20px; /* 필요에 따라 여백 추가 */
+   text-align: center; /* 가운데 정렬 */
+}
+
+/* 페이지 링크의 스타일 지정 */
+.default_paging a {
+   padding: 5px 10px;
+   text-decoration: none;
+   margin-right: 5px;
+   color: #000;
+   background-color: #f0f0f0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+/* 현재 페이지를 나타내는 strong 태그 */
+.default_paging strong {
+   padding: 5px 10px;
+   margin-right: 5px;
+   color: #fff;
+   background-color: #007bff;
+   border: 1px solid #007bff;
+   border-radius: 5px;
+}
+
+
+
+.btn-go-submit{
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #fede22;
+   /*border: 1px solid #fede22;*/
+
+
+}
+
+
+
+
+/*.parent-container {*/
+/*   text-align: right; !* 내부 요소를 오른쪽으로 정렬 *!*/
+/*   font-family: Arial, sans-serif; !* 폰트 설정 *!*/
+/*}*/
+
+/*.font-large3-bold {*/
+/*   font-size: large;*/
+/*   font-weight: bold;*/
+/*   margin-right: 1500px; !* 위, 오른쪽, 아래, 왼쪽 마진을 0으로 설정하여 오른쪽으로 정렬 *!*/
+/*   text-align: right; !* 텍스트를 오른쪽으로 정렬 *!*/
+/*}*/
+
+/*.inline-block {*/
+/*   display: inline-block;*/
+/*}*/
+
+/*.py {*/
+/*   padding-top: 1em;*/
+/*   padding-bottom: 1em;*/
+/*}*/
+
+/*.pxr {*/
+/*   padding-left: 1em;*/
+/*   padding-right: 1em;*/
+/*}*/
+
+/*.test-el-60 {*/
+/*   margin-top: 1500px; !* 요소 사이의 간격을 위한 마진 *!*/
+/*}*/
+
+/*.span {*/
+/*   margin-top: 500px; !* 요소 사이의 간격을 위한 마진 *!*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
