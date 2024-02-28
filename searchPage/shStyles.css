@@ -269,6 +269,16 @@ main{
 
 
 
+/*.new, .best {*/
+/*   list-style: none; !* 리스트 스타일 제거 *!*/
+/*}*/
+
+
+
+
+
+
+
 /*-------------------------헤더 끝----------------------------------------------*/
 
 .container {
@@ -298,7 +308,7 @@ footer{
    width: 100%;
    height: 300px;
    background-color: #2d312d;
-   margin-top: 5000px;
+   margin-top: 5100px;
 
 }
 /*미디어 쿼리*/
@@ -357,16 +367,63 @@ footer{
 
 
 
+
+
+
+
+
+.wrap-container{
+   width: 100%;
+   height: 100%;
+   margin: 0 auto;
+}
+.contents-container{
+   width: 100%;
+   height: 100%;
+   margin: 0 200px;
+}
+.toptopnav{
+   width: 1200px;
+   height: 15px;
+
+   /*.text-with-dot::before {*/
+   /*   content: '\2022'; !* 유니코드에서 원점 문자 *!*/
+   /*   color: black; !* 검은색 *!*/
+   /*   margin-right: 5px; !* 원점과 텍스트 간격 조정 *!*/
+   /*}*/
+
+   /*margin-bottom:10px;*/
+
+
+
+   /*mar
+gin-top: 30px;*/
+}
+
+.toptopnav {
+   margin-top: 12px;
+   font-weight: bold ;
+   font-size: 20px;
+
+}
+
+
 .flex-box {
-   width: 180px;
+   width: 1200px;
    height: 220px;
-   background-color: black;
+   background-color: #f3eaea;
    margin: 10px;
-   display: flex;
+   /*display: flex;*/
+
    justify-content: center;
    align-items: center;
    border-radius: 10px;
    margin-bottom: 70px;
+}
+
+
+.flex-box img{
+  float: left; /* 이미지 넣었을경우 많이 쓰인다*/
 }
 
 .flex-box img {
@@ -378,17 +435,8 @@ footer{
 }
 
 
-/*flex-box1 {*/
-/*   width: calc(16.6667% - 20px); !* 각 요소의 너비를 16.6667%로 설정 *!*/
-/*   height: 220px;*/
-/*   background-color: black;*/
-/*   margin: 10px;*/
-/*   display: flex;*/
-/*   justify-content: center;*/
-/*   align-items: center;*/
-/*   border-radius: 10px;*/
-/*   margin-bottom: 70px;*/
-/*}*/
+
+
 
 /* 페이지 링크를 가로로 배열하고 각 링크 사이에 간격을 주기 위해 flex 속성 사용 */
 .default_paging {
@@ -397,6 +445,7 @@ footer{
    align-items: center; /* 세로 중앙 정렬 */
    margin-top: 20px; /* 필요에 따라 여백 추가 */
    text-align: center; /* 가운데 정렬 */
+   margin-left: 120px;
 }
 
 /* 페이지 링크의 스타일 지정 */
@@ -433,46 +482,26 @@ footer{
 
 
 
-/*.parent-container {*/
-/*   text-align: right; !* 내부 요소를 오른쪽으로 정렬 *!*/
-/*   font-family: Arial, sans-serif; !* 폰트 설정 *!*/
-/*}*/
+.default_paging a {
+   text-decoration: none; /* 링크 밑줄 제거 */
+   cursor: pointer; /* 포인터 모양으로 변경 */
+}
 
-/*.font-large3-bold {*/
-/*   font-size: large;*/
-/*   font-weight: bold;*/
-/*   margin-right: 1500px; !* 위, 오른쪽, 아래, 왼쪽 마진을 0으로 설정하여 오른쪽으로 정렬 *!*/
-/*   text-align: right; !* 텍스트를 오른쪽으로 정렬 *!*/
-/*}*/
+.default_paging a:hover {
+   color: white; /* 호버 시 텍스트 색상 변경 */
+}
 
-/*.inline-block {*/
-/*   display: inline-block;*/
-/*}*/
 
-/*.py {*/
-/*   padding-top: 1em;*/
-/*   padding-bottom: 1em;*/
-/*}*/
 
-/*.pxr {*/
-/*   padding-left: 1em;*/
-/*   padding-right: 1em;*/
-/*}*/
 
-/*.test-el-60 {*/
-/*   margin-top: 1500px; !* 요소 사이의 간격을 위한 마진 *!*/
-/*}*/
 
-/*.span {*/
-/*   margin-top: 500px; !* 요소 사이의 간격을 위한 마진 *!*/
-/*}*/
-/* 기본적인 스타일 유지 */
+
 
 
 .font-large3-bold {
    font-size: 1.5rem; /* 원하는 크기로 조정하세요 */
    font-weight: bold;
-   margin-right:1900px ;
+   margin-right:1650px ;
    margin-top: 130px;
 }
 
@@ -543,6 +572,81 @@ footer{
    margin-left: 1700px; /* 오른쪽으로 100px 이동 */
    border-radius: 20px; /* 원하는 값으로 조절 */
    overflow: hidden;
+}
+
+
+
+.info_area{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
+
+
+.author, .genre, .status, .novels ,.title{
+   /*font-style: italic;*/
+   font-size: 17px ;
+   font-weight:normal ;
+   margin-bottom: 10px;
+
+}
+
+.info_group {
+   margin-bottom:5px; /* 원하는 간격으로 조정 가능 */
+   /*margin-top: 20px;*/
+   /*margin-bottom: 30px;*/
+}
+
+
+/*.container {*/
+/*   !*display: flex;*!*/
+/*   !*flex-direction: row;*!*/
+/*   !*align-items: center; !* 요소들을 수직으로 가운데 정렬 *!*!*/
+/*}*/
+
+/* 각 요소에 좌우 여백을 주어 간격을 조정 */
+/*.container > * {*/
+/*   margin: 0 10px;*/
+
+/*}*/
+
+/*.container {*/
+/*   text-align: justify;*/
+/*}*/
+
+/*!* 텍스트 사이의 간격을 유지하기 위한 가상 요소 활용 *!*/
+/*.container:after {*/
+/*   content: '';*/
+/*   display: inline-block;*/
+/*   width: 100%;*/
+/*}*/
+
+
+/*.toggleContent {*/
+/*   display: none; !* 초기에는 숨김 *!*/
+/*}*/
+
+/*#toggleButton:checked + .toggleContent {*/
+/*   display: block; !* 토글 버튼이 클릭되면 보여짐 *!*/
+/*}*/
+
+
+
+
+.accordion-item {
+   border-top: 1px solid #ccc;
+}
+.accordion-title {
+   background-color: #f1f1f1;
+   padding: 10px;
+   cursor: pointer;
+}
+.accordion-content {
+   padding: 10px;
+   display: none;
 }
 
 
