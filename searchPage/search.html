@@ -78,64 +78,25 @@
         </ul>
     </div>
 
-
-
-
-
-
-
-<!--<div class="wrap-container">-->
-<!--    <ul class="navi">-->
-<!--        <li><a href="#">최신순</a>-->
-<!--            <ul class="sub">-->
-<!--                <li><a href="latest.html">인기순</a></li> &lt;!&ndash; 여기에 최신순 페이지 URL을 지정 &ndash;&gt;-->
-<!--            </ul>-->
-<!--        </li>-->
-<!--    </ul>-->
-
-
-
-
-
-
-<!--    <ul class="navi">-->
-<!--        <li id="latest"><a href="#">최신순</a>-->
-<!--&lt;!&ndash;            <ul class="sub">&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a href="#">서브메뉴 1</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a href="#">서브메뉴 2</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
-<!--&lt;!&ndash;        </li>&ndash;&gt;-->
-<!--        <li id="popular"><a href="#">인기순</a>-->
-<!--&lt;!&ndash;            <ul class="sub">&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a href="#">서브메뉴 3</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a href="#">서브메뉴 4</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
-<!--        </li>-->
-<!--    </ul>-->
-
-
-
-
-
-
-    <div class="accordion">
-        <div class="accordion-item">
-            <div class="accordion-title">최신순</div>
-            <div class="accordion-content">
-                인기순
-            </div>
-        </div>
-
-
-
-
-
     <main>
         <div class="contents container">
 
-            <div class="toptopnav">장르 검색 결과</div>
-<!--            <div class="new"><a href="#"> 최신순</a></div>-->
-<!--            <div class="bost"><a href="latest.html">인기순</a></div>-->
+<!--            <div class="toptopnav">장르 검색 결과</div>-->
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">최신순</div>
+                    <div class="accordion-content"><a href="#"></a>
+                        <!-- 최신순 내용 -->
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">인기순</div>
+                    <div class="accordion-content"><a href="#"></a>
+                        <!-- 인기순 내용 -->
+                    </div>
+
+
 
             <!-- 첫 번째 가로 줄 -->
             <div class="flex-box">
@@ -609,6 +570,42 @@
             }
         });
     }
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                // 현재 클릭된 아코디언 아이템 찾기
+                const isActive = this.classList.contains('active');
+
+                // 모든 아코디언 아이템에서 active 클래스 제거
+                accordionItems.forEach(function(item) {
+                    item.classList.remove('active');
+                });
+
+                // 현재 클릭된 아코디언 아이템에 active 클래스 추가 (토글)
+                if (!isActive) {
+                    this.classList.add('active');
+                }
+            });
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 <footer>

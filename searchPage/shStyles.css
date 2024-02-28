@@ -269,9 +269,9 @@ main{
 
 
 
-/*.new, .best {*/
-/*   list-style: none; !* 리스트 스타일 제거 *!*/
-/*}*/
+.new, .best {
+   list-style: none; /* 리스트 스타일 제거 */
+}
 
 
 
@@ -584,15 +584,15 @@ gin-top: 30px;*/
 }
 
 
-
-
-.author, .genre, .status, .novels ,.title{
-   /*font-style: italic;*/
-   font-size: 17px ;
-   font-weight:normal ;
-   margin-bottom: 10px;
-
+.author, .genre, .status, .title {
+   /* 폰트 스타일 */
+   /* font-style: italic; */
+   font-size: 17px;
+   /*font-weight: normal;*/
+   margin-bottom: 50px;
+   text-align: center; /* 텍스트 가운데 정렬 */
 }
+
 
 .info_group {
    margin-bottom:5px; /* 원하는 간격으로 조정 가능 */
@@ -636,23 +636,141 @@ gin-top: 30px;*/
 
 
 
-.accordion-item {
-   border-top: 1px solid #ccc;
+/*.accordion-item {*/
+/*   border-top: 1px solid #ccc;*/
+/*}*/
+/*.accordion-title {*/
+/*   background-color: #f1f1f1;*/
+/*   padding: 10px;*/
+/*   cursor: pointer;*/
+/*}*/
+/*.accordion-content {*/
+/*   padding: 10px;*/
+/*   display: none;*/
+/*}*/
+
+
+/* 아코디언 스타일 */
+
+/* 아코디언 스타일 */
+/* 아코디언 스타일 */
+/* 아코디언 스타일 */
+/*.accordion-item {*/
+/*   margin-bottom: 5px;*/
+/*   border-radius: 3px;*/
+/*   overflow: hidden;*/
+/*   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.accordion-title {*/
+/*   background-color: #f4f4f4;*/
+/*   padding: 8px;*/
+/*   cursor: pointer;*/
+/*   font-weight: bold;*/
+/*   border-bottom: 1px solid #ddd;*/
+/*   font-size: 14px;*/
+/*}*/
+
+/*.accordion-content {*/
+/*   padding: 8px;*/
+/*   display: none;*/
+/*   font-size: 12px;*/
+/*}*/
+
+/*!* 아코디언 활성화 시 스타일 *!*/
+/*.accordion-item.active .accordion-title {*/
+/*   background-color: #eaeaea;*/
+/*}*/
+
+/*.accordion-item.active .accordion-content {*/
+/*   display: block;*/
+/*}*/
+
+
+nav {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: rgb(255, 255, 255);
+   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+   border-top: 2px solid rgba(0, 0, 0, 0.3);
+   z-index: 1000;
 }
-.accordion-title {
-   background-color: #f1f1f1;
+
+
+
+
+.details{
+   margin-left: 150px;
+}
+
+
+
+
+.new1, .bost1{
+   margin-left: 1000px;
+}
+
+
+.new1:active {
+   /* 최신순 클릭 시 적용될 스타일을 여기에 추가합니다. */
+   color: red; /* 예시로 글자색을 빨간색으로 변경합니다. */
+}
+
+
+.accordion-header {
+   background-color: #f4f4f4;
    padding: 10px;
    cursor: pointer;
+   max-width: 180px; /* 최대 너비를 180px로 설정 */
+   position: relative;
+   margin-left: auto; /* 왼쪽 여백을 최대로 확보 */
+   margin-right: 100px; /* 오른쪽 여백을 추가하여 요소를 오른쪽으로 이동시킴 */
 }
+
 .accordion-content {
-   padding: 10px;
    display: none;
+   padding: 10px;
+}
+
+.active .accordion-content {
+   display: block;
+}
+
+
+.accordion-header {
+   background-color: #f4f4f4;
+   padding: 10px;
+   cursor: pointer;
+   width: 200px; /* 원하는 너비 값으로 수정하세요 */
+   position: relative;
+   right: 50px; /* 오른쪽으로 이동시킬 값으로 조정하세요 */
+   border-radius: 10px; /* 테두리를 둥글게 만들기 */
+}
+
+.accordion-header a {
+   text-decoration: none; /* 링크 텍스트에 밑줄 제거 */
+   color: inherit; /* 링크 텍스트의 색상을 상위 요소와 동일하게 유지 */
+}
+
+
+.accordion-header {
+   background-color: #f4f4f4;
+   padding: 10px;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+/* 버튼을 눌렀을 때의 스타일 */
+.accordion-header:active {
+   background-color: #dcdcdc;
 }
 
 
 
-
-
-
-
-
+/*.flex-box {*/
+/*   display: flex;*/
+/*   flex-direction: column;*/
+/*   align-items: center;*/
+/*   text-align: center;*/
+/*}*/
