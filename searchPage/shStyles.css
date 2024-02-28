@@ -308,7 +308,7 @@ footer{
    width: 100%;
    height: 300px;
    background-color: #2d312d;
-   margin-top: 5100px;
+   margin-top: 5150px;
 
 }
 /*미디어 쿼리*/
@@ -582,6 +582,38 @@ gin-top: 30px;*/
    justify-content: center;
 
 }
+
+
+/*.flex-box {*/
+/*   display: flex;*/
+/*   flex-direction: column;*/
+/*   align-items: center; !* 수직으로 중앙 정렬 *!*/
+/*   text-align: center; !* 텍스트 가로 방향으로 중앙 정렬 *!*/
+/*}*/
+
+/* 제목과 필명, 장르, 연재 텍스트 스타일링 */
+.title, .author, .genre, .status {
+   font-size: 17px;
+   font-weight: normal;
+   margin-bottom: 500px; /* 텍스트 간격 조정 */
+}
+
+
+/*.flex-box {*/
+/*   display: flex;*/
+/*   !*flex-direction: column;*!*/
+/*   !*align-items: center; !* 수직으로 중앙 정렬 *!*!*/
+/*}*/
+
+/* 제목과 필명, 장르, 연재 텍스트 스타일링 */
+.flex-box p {
+   text-align: left; /* 텍스트 가로 방향으로 중앙 정렬 */
+   margin-bottom: 0; /* 텍스트 간격 조정 */
+   margin-top: 38px;
+   margin-left: 400px;
+}
+
+
 
 
 .author, .genre, .status, .title {
